@@ -1,26 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccordionModule } from 'ngx-bootstrap';
-import { FormsModule } from '@angular/forms';
-import { ModalModule } from 'ngx-bootstrap/modal';
+import { MainComponent } from './main/main.component';
+import { AddQuestionsComponent } from './add-questions/add-questions.component';
+import { StartQuizComponent } from './start-quiz/start-quiz.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    AddQuestionsComponent,
+    StartQuizComponent
   ],
   imports: [
-    ModalModule.forRoot(),
-    BrowserAnimationsModule,
-    ToastrModule.forRoot(),
-  AccordionModule.forRoot(),
     BrowserModule,
-    FormsModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
